@@ -1,0 +1,185 @@
+/* Reset some default browser styles */
+body, h1, h2, ul, li, p, form {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    color: #fff;
+}
+
+header {
+    background-color: rgba(52, 152, 219, 0.8);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#city-input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#city-input:focus {
+    outline: none;
+}
+
+#suggestion-list {
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 2px;
+    max-height: 150px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1;
+}
+
+#suggestion-list li {
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#suggestion-list li:hover {
+    background-color: rgba(52, 152, 219, 0.8);
+    color: #fff;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+#current-weather, #forecast {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#current-weather h2, #forecast h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    text-align: center;
+}
+
+.weather-info > div {
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgba(52, 152, 219, 0.8);
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#weather-icon img {
+    max-width: 80px;
+    height: auto;
+}
+
+
+.forecast-day > div {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* ... Previous CSS Code ... */
+
+/* Advanced Forecast Styles */
+#forecast {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+#forecast h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#forecast-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.forecast-day {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.forecast-day:hover {
+    transform: translateY(-5px);
+    background-color: #ccc;
+}
+
+.forecast-day > div {
+    margin-bottom: 1rem;
+}
+
+.forecast-day img {
+    max-width: 60px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    #forecast-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .forecast-day {
+        padding: 1rem;
+    }
+    
+    /* Additional media query styles can be added here */
+}
+
+/* ... Previous CSS Code ... */
+
